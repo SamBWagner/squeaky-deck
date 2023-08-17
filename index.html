@@ -13,7 +13,7 @@
     </head>
     <body>
         <header class="contained">
-            <h1>Un-<b>Fuck</b> your magic deck list <img src="./images/forge-icon.svg" alt="flask"></h1>
+           <h1>Un-<b>Fuck</b> your magic deck list <img src="./images/forge-icon.svg" alt="flask"></h1>
         </header>
 
         <main class="contained">
@@ -25,8 +25,10 @@
                 <div class="input-wrapper">
                     <label for="modified">Modified</label>
                     <textarea placeholder="Your modifications will show here..." wrap="hard" id="modified"></textarea>
-                    <button type="button" onclick="cutBottomLine()"><img src="images/up.svg" alt="cut the bottom line"></button>
-                    <button type="button" onclick="cutTopLine()"><img src="images/down.svg" alt="cut the top line"></button>
+                    <div class="button-wrapper">
+                        <button type="button" onclick="cutBottomLine()"><img src="images/up.svg" alt="cut the bottom line"></button>
+                        <button type="button" onclick="cutTopLine()"><img src="images/down.svg" alt="cut the top line"></button>
+                    </div>
                 </div>
                 <div class="input-wrapper">
                     <label for="output">Output</label>
