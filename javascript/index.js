@@ -1,12 +1,12 @@
-function cutBottomLine() {
-    let modifyingWindow = document.getElementById("modified").Value;
+loadPageScripts();
 
-    console.log("${modifyingWindow}");
-}
+function loadPageScripts() {
+   let inputWindow = document.getElementById("input");
 
-function cutTopLine() {
-    let modifyingWindow = document.getElementById("modified").Value;
+    inputWindow.addEventListener("paste", function (event) {
+        let modificationwindow = document.getElementById("modified");
 
-    console.log("${modifyingWindow}");
+        modificationwindow.innerHTML = event.clipboardData.getData("text"); 
+    });
 }
 
