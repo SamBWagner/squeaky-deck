@@ -65,7 +65,8 @@ main form .input-wrapper {
     display: flex;
     flex-direction: column;
 
-    width: 32%;
+    width: 50%;
+    max-width: 120rem;
 }
 
 main form label {
