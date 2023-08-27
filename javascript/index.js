@@ -29,3 +29,9 @@ function cleaseDecklist(decklist) {
     return outputArr.join('\n');
 }
 
+function copyToClipboard() {
+    let text = document.getElementById("output").value;
+
+    navigator.clipboard.writeText(text);
+}
+

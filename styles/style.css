@@ -61,6 +61,13 @@ main form {
     width: 100%;
 }
 
+main form .button-shit {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
 main form .input-wrapper {
     display: flex;
     flex-direction: column;
@@ -113,17 +120,25 @@ main .button-wrapper {
 main button {
     display: flex;
     align-items: center;
+    border: none;    
+    background-color: #83d187;
+    color: #fff;
+    box-shadow: 0.4rem 0.3rem #000;
+    transition: 200ms ease-out;
+    font-family: monospace;
 
-    background-color: #F0B7B3;
-    border: none;
     border-radius: 1rem;
     margin-right: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-right: 2rem;
     padding-left: 2rem;
+}
 
-    box-shadow: 0.1rem 0.1rem 1rem 0.1rem #a7a3d1, inset 0.1rem 0.1rem 0.5rem 0.1rem #d09793;
+main button:active {
+    transition: 50ms ease-in;
+    box-shadow: 0rem 0rem #000;
+    border: solid #000;
 }
 
 main button img {
