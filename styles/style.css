@@ -135,10 +135,16 @@ main button {
     padding-left: 2rem;
 }
 
-main button:active {
+main button:is(:active, :hover) {
     transition: 50ms ease-in;
     box-shadow: 0rem 0rem #000;
-    border: solid #000;
+    border: solid 3px #000;
+}
+
+main button:is(:hover):not(:active) {
+    transition: 100ms ease-in-out;
+    box-shadow: 0.6rem 0.5rem #000;
+    border: solid 2px #000;
 }
 
 main button img {
