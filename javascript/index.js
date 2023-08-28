@@ -6,8 +6,36 @@ function loadPageScripts() {
 
     inputWindow.addEventListener("paste", function (event) {
         let modificationwindow = document.getElementById("output");
+        let clipboardData = event.clipboardData;
 
-        modificationwindow.innerHTML = cleaseDecklist(event.clipboardData.getData("text"));
+        if (clipboardData == null || clipboardData == undefined) {
+            return;
+        }
+
+        let data = clipboardData.getData("text");
+
+        if (data == null || data == undefined) {
+            return;
+        }
+
+        modificationwindow.innerHTML = cleaseDecklist(data);
+    });
+
+    inputWindow.addEventListener("blur", function (event) {
+        let modificationwindow = document.getElementById("output");
+        let clipboardData = event.clipboardData;
+
+        if (clipboardData == null || clipboardData == undefined) {
+            return;
+        }
+
+        let data = clipboardData.getData("text");
+
+        if (data == null || data == undefined) {
+            return;
+        }
+
+        modificationwindow.innerHTML = cleaseDecklist(data);
     });
 }
 
@@ -39,8 +67,6 @@ function copyToClipboard() {
 function getRandomSwearWord() {
     const swears = ["Fuck", "Frick", "Screw", "Shitify", "Cock-Up", "Explode", "Root"];
     let randomNumber = Math.floor(Math.random() * (swears.length - 1));
-    console.log(swears.length);
-    console.log(randomNumber);
 
     let swearOnPage = document.getElementById("swear")
     swearOnPage.innerHTML = swears[randomNumber];
