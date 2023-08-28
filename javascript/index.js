@@ -1,4 +1,5 @@
 loadPageScripts();
+getRandomSwearWord();
 
 function loadPageScripts() {
    let inputWindow = document.getElementById("input");
@@ -33,5 +34,16 @@ function copyToClipboard() {
     let text = document.getElementById("output").value;
 
     navigator.clipboard.writeText(text);
+}
+
+function getRandomSwearWord() {
+    const swears = ["Fuck", "Frick", "Screw", "Shitify", "Cock-Up", "Explode", "Root"];
+    let randomNumber = Math.floor(Math.random() * (swears.length - 1));
+    console.log(swears.length);
+    console.log(randomNumber);
+
+    let swearOnPage = document.getElementById("swear")
+    swearOnPage.innerHTML = swears[randomNumber];
+
 }
 
