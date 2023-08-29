@@ -65,7 +65,22 @@ function copyToClipboard() {
 }
 
 function getRandomSwearWord() {
-    const swears = ["Fuck", "Frick", "Screw", "Shitify", "Cock-Up", "Explode", "Root"];
+    const swears = [
+        "Fuck", 
+        "Frick", 
+        "Screw", 
+        "Shitify", 
+        "Cock-Up", 
+        "Explode", 
+        "Root",
+        "Mangle",
+        "Gunk",
+        "Scramble",
+        "Wonk",
+        "Warp",
+        "Clutter",
+        "Crunch"
+    ];
     let randomNumber = Math.floor(Math.random() * (swears.length - 1));
 
     let swearOnPage = document.getElementById("swear")
